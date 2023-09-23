@@ -53,6 +53,9 @@ const createString = (string, array) => {
     return {newString: string, newArray: array};
 }
 
+
+//S -> Si -> Sie -> Siem -> Siema -> Sieman -> Siemank -> Siemanko
+
 gameInputField.addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
         
