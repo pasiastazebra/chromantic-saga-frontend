@@ -1,15 +1,26 @@
+.text-red {
+  color: #9e0000;
+}
+.text-green {
+  color: #9e0000;
+}
+.text-blue {
+  color: #9e0000;
+}
+
 .textbox {
   font-family: "VT323", monospace;
+  color: #ffffff;
 }
 
 .title {
   font-family: "VT323", monospace;
   text-align: center;
+  color: #ffffff;
 }
 
 html {
   background-color: #000000;
-  color: #ffffff;
 }
 
 .game-window {

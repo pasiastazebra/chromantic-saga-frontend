@@ -1,15 +1,39 @@
+//color variables -> all red cause of jam reqs ->-> need to change it after to the proper colors
+
+$red: #9e0000;
+$green: #9e0000;
+$blue: #9e0000;
+
+//color styles
+
+.text {
+    &-red {
+        color: $red;
+    }
+
+    &-green {
+        color: $green;
+    }
+
+    &-blue {
+        color: $blue;
+    }
+}
+
 .textbox {
     font-family: 'VT323', monospace;
+    color: #ffffff;
 }
 
 .title {
     font-family: 'VT323', monospace;
     text-align: center;
+    color: #ffffff;
 }
 
 html {
     background-color: #000000;
-    color: #ffffff;
+    
 }
 
 .game-window {
