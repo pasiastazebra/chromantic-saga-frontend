@@ -50,6 +50,8 @@ html {
 .center-column {
     display: flex;
     justify-content: center;
+
+    width: 100%;
 }
 
 .image {
@@ -63,11 +65,35 @@ html {
     border-right: 7px double #ffffff;
 }
 
-#game-textfield {
-    padding: 25px;
+#game {
+    &-textfield {
+        padding: 25px;
+    
+        height: 65vh;
+    }
+
+    &-input {
+        margin: 5px;
+        padding: 1%;
+
+        height: 5vh;
+        width: 97%;
+
+        background: none;
+
+        border: 1px dashed #ffffff;
+        border-radius: 10px;
+
+        &::placeholder {
+            color: #ffffff;
+            font-style: italic;
+        }
+    }
 }
 
 #stats-field {
     display: grid;
     grid-template-columns: 50% 50%;
+
+    border-top: 7px double #ffffff;
 }
