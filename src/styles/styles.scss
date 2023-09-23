@@ -23,3 +23,15 @@ html {
 #game-textfield {
     padding: 25px;
 }
+
+#stats-field {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.image {
+    max-height: 220px;
+
+    display: flex;
+    justify-content: center;
+}
