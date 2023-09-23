@@ -3,16 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/styles.css">
     <title>Allpa Llinpi</title>
 </head>
+
 <body>
     <div class="game-window">
-        <textarea class="textbox" name="game-textfield" id="game-textfield"></textarea>
-        <input class="textbox" type="text" name="game-input" id="game-input">
-        <input class="textbox" type="text" id="game-stats">
+        <h1 class="title">Allpa Llinpi</h1>
+
+        <div class="textbox" id="game-textfield">
+            
+        </div>
+
+        <input class="textbox" type="text" name="game-input" id="game-input" placeholder="Please, type 'Start' to start">
+
+        <div class="textbox" id="game-stats">
+            <p class="red-text">Red: <p id="player-stats-red"> 10 </p> </p>
+            <p class="blue-text">Blue: <p id="player-stats-blue"> 20 </p> </p>
+            <p class="green-text">Green: <p id="player-stats-green"> 30 </p> </p>
+        </div>
         <img src="https://m.media-amazon.com/images/I/51BWXeC5qPL._AC_UF1000,1000_QL80_.jpg" alt="" id="game-icon">
-        <input class="textbox" type="text" id="game-enemy-stats">
-        <img src="https://www.celladorales.com/wp-content/uploads/2016/12/ShippingBox_sq.jpg" alt="" id="game-enemy-icon">
+
+        <div class="textbox" id="enemy-stats">
+            <p class="red-text">Red: <p id="enemy-stats-red"> 10 </p> </p>
+            <p class="blue-text">Blue: <p id="enemy-stats-blue"> 20 </p> </p>
+            <p class="green-text">Green: <p id="enemy-stats-green"> 30 </p> </p>
+        </div>
     </div>
 </body>
 </html>
