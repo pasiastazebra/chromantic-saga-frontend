@@ -7,17 +7,25 @@ $blue: #9e0000;
 //color styles
 
 .text {
+    
     &-red {
         color: $red;
+        display: inline;
     }
 
     &-green {
         color: $green;
+        display: inline;
     }
 
     &-blue {
         color: $blue;
+        display: inline;
     }
+}
+
+html {
+    background-color: #000000;
 }
 
 .textbox {
@@ -29,11 +37,6 @@ $blue: #9e0000;
     font-family: 'VT323', monospace;
     text-align: center;
     color: #ffffff;
-}
-
-html {
-    background-color: #000000;
-    
 }
 
 .game-window {

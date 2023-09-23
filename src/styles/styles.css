@@ -1,11 +1,18 @@
 .text-red {
   color: #9e0000;
+  display: inline;
 }
 .text-green {
   color: #9e0000;
+  display: inline;
 }
 .text-blue {
   color: #9e0000;
+  display: inline;
+}
+
+html {
+  background-color: #000000;
 }
 
 .textbox {
@@ -17,10 +24,6 @@
   font-family: "VT323", monospace;
   text-align: center;
   color: #ffffff;
-}
-
-html {
-  background-color: #000000;
 }
 
 .game-window {
