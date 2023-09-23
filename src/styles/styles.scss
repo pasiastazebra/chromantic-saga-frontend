@@ -47,13 +47,9 @@ html {
     grid-template-columns: 65% 35%;
 }
 
-#game-textfield {
-    padding: 25px;
-}
-
-#stats-field {
-    display: grid;
-    grid-template-columns: 50% 50%;
+.center-column {
+    display: flex;
+    justify-content: center;
 }
 
 .image {
@@ -61,4 +57,17 @@ html {
 
     display: flex;
     justify-content: center;
+}
+
+#col-1 {
+    border-right: 7px double #ffffff;
+}
+
+#game-textfield {
+    padding: 25px;
+}
+
+#stats-field {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

@@ -33,6 +33,21 @@ html {
   grid-template-columns: 65% 35%;
 }
 
+.center-column {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-height: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+#col-1 {
+  border-right: 7px double #ffffff;
+}
+
 #game-textfield {
   padding: 25px;
 }
@@ -40,12 +55,6 @@ html {
 #stats-field {
   display: grid;
   grid-template-columns: 50% 50%;
-}
-
-.image {
-  max-height: 220px;
-  display: flex;
-  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
