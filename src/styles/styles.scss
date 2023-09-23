@@ -4,8 +4,15 @@
 
 .title {
     font-family: 'VT323', monospace;
+    text-align: center;
+}
+
+html {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .game-window {
-    
+    border: 7px double #ffffff;
+    border-radius: 10px;
 }
