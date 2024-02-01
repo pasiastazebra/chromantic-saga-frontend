@@ -19,43 +19,33 @@ const enemyStats = {
   green: document.getElementById("enemy-stats-green"),
 };
 
+//console object
+
+const respond = {
+  text: [],
+  options: [],
+};
+
 //functions
 
-const updateTextField = (text) => {
-  gameTextField.innerHTML = text;
+const displayText = (inputString, target) => {
+  target.innerHTML = `${inputString}`;
 };
 
-const updatePlayerStats = (red, blue, green) => {
-  playerStats.red.innerHTML = red;
-  playerStats.blue.innerHTML = blue;
-  playerStats.green.innerHTML = green;
+const write = (inputString, target) => {
+  const letters = inputString.split("");
+
+  console.log(letters);
+
+  let respond = "";
+
+  letters.forEach((letter, i) => {
+    setTimeout(() => {
+      respond += letter;
+      console.log(respond);
+      displayText(respond, target);
+    }, i * 100);
+  });
 };
 
-const updateEnemyStats = (red, blue, green) => {
-  enemyStats.blue.innerHTML = blue;
-  enemyStats.red.innerHTML = red;
-  enemyStats.green.innerHTML = green;
-};
-
-const takeInputValue = () => {
-  return gameInputField.value;
-};
-
-const createArray = (input) => {
-  return input.split("");
-};
-
-const createString = (string, array) => {
-  const letter = array.shift();
-
-  string += letter;
-
-  return { newString: string, newArray: array };
-};
-
-//S -> Si -> Sie -> Siem -> Siema -> Sieman -> Siemank -> Siemanko
-
-gameInputField.addEventListener("keydown", function (event) {
-  if (event.keyCode === 13) {
-  }
-});
+write("siemanko", gameTextField);
