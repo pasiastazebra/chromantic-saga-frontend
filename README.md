@@ -1,2 +1,3 @@
-# allpa-llinpi-cactujam-game
-Game for the 12'th Cactujam
+# Chromantic Saga - Front end
+
+This is the frontend of Chromantic Saga text-based game.
