@@ -28,6 +28,8 @@ const respond = {
 
 //functions
 
+const isOdd = (number) => number % 2 !== 0;
+
 const displayText = (inputString, target) => {
   target.innerHTML = `${inputString}`;
 };
@@ -42,8 +44,18 @@ const write = (inputString, target) => {
   letters.forEach((letter, i) => {
     setTimeout(() => {
       respond += letter;
+      let respondToSend = respond;
+      console.log(i);
+      if (i === letters.length - 1) {
+        respondToSend += "_";
+      } else if (isOdd(i)) {
+        respondToSend += "▮";
+      } else {
+        respondToSend += "▯";
+      }
       console.log(respond);
-      displayText(respond, target);
+      console.log(respondToSend);
+      displayText(respondToSend, target);
     }, i * 100);
   });
 };
