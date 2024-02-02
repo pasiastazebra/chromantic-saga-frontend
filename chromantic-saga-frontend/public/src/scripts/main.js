@@ -53,7 +53,8 @@ const testRespond = {
       color: "yellow",
     },
     {
-      sentence: "M CO TAM CO O TAM",
+      sentence:
+        "Qui eiusmod reprehenderit occaecat cupidatat qui ut anim sit qui laborum id eu sint. Deserunt laboris ullamco anim deserunt et magna voluptate eiusmod qui cillum ullamco Lorem aute. Sunt in ut id aliqua occaecat dolor. Adipisicing irure nostrud excepteur ex. Mollit in anim occaecat pariatur. Id do laboris nostrud et sint magna mollit enim nulla fugiat non proident deserunt Lorem.",
       color: "white",
     },
   ],
@@ -91,14 +92,14 @@ const write = (inputString, target) => {
 const renderResponse = async (response) => {
   gameTextField.innerHTML = "";
   for (let sentenceObject of response.text) {
-    let newParagraph = document.createElement("span");
+    const newParagraph = document.createElement("span");
     newParagraph.className = `text-${sentenceObject.color}`;
     gameTextField.appendChild(newParagraph);
 
     await write(sentenceObject.sentence, newParagraph);
   }
   response.options.forEach((option) => {
-    let newParagraph = document.createElement("p");
+    const newParagraph = document.createElement("p");
     newParagraph.className = `text-option`;
     gameTextField.appendChild(newParagraph);
 
