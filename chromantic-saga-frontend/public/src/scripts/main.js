@@ -83,12 +83,13 @@ const write = (inputString, target) => {
         }
         displayText(respondToSend, target);
         if (i === letters.length - 1) resolve();
-      }, i * 100);
+      }, i * 50);
     });
   });
 };
 
 const renderResponse = async (response) => {
+  gameTextField.innerHTML = "";
   for (let sentenceObject of response.text) {
     let newParagraph = document.createElement("span");
     newParagraph.className = `text-${sentenceObject.color}`;
