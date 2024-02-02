@@ -46,11 +46,9 @@ const write = (inputString, target) => {
       respond += letter;
       let respondToSend = respond;
       console.log(i);
-      if (i === letters.length - 1) {
-        respondToSend += "_";
-      } else if (isOdd(i)) {
+      if (isOdd(i) & (i !== letters.length - 1)) {
         respondToSend += "▮";
-      } else {
+      } else if (i !== letters.length - 1) {
         respondToSend += "▯";
       }
       console.log(respond);
@@ -61,3 +59,12 @@ const write = (inputString, target) => {
 };
 
 write("siemanko", gameTextField);
+
+gameInputField.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    console.log("enter pressed");
+
+    write(this.value, gameTextField);
+    this.value = "";
+  }
+});

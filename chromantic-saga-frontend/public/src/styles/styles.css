@@ -1,13 +1,17 @@
 .text-red {
-  color: #11a11d;
+  color: #fe0000;
   display: inline;
 }
 .text-green {
-  color: #11a11d;
+  color: #06ff04;
   display: inline;
 }
 .text-blue {
-  color: #11a11d;
+  color: #0000ff;
+  display: inline;
+}
+.text-yellow {
+  color: #ffff04;
   display: inline;
 }
 

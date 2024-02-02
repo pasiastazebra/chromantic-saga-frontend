@@ -1,8 +1,9 @@
-//color variables -> all red cause of jam reqs ->-> need to change it after to the proper colors
+//color variables
 
-$green: #11a11d;
-$red: $green;
-$blue: $green;
+$green: #06ff04;
+$red: #fe0000;
+$blue: #0000ff;
+$yellow: #ffff04;
 
 //color styles
 
@@ -20,6 +21,11 @@ $blue: $green;
 
     &-blue {
         color: $blue;
+        display: inline;
+    }
+
+    &-yellow {
+        color: $yellow;
         display: inline;
     }
 }
