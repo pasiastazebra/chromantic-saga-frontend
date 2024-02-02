@@ -53,11 +53,11 @@ const testRespond = {
       color: "yellow",
     },
     {
-      sentence:
-        "GIGANTYCZNIE DŁUGI TEKST KTÓRY MA SIĘ PRZECIĄĆ W NASTĘPNEJ LINII ZOBACZYMY JAK TO WYGLĄDA TEST TEST TEST TEST CO TAM CO TAM CO TAM ZOBACZYMY JAK TO WYGLĄDA TEST TEST TEST TEST CO TAM CO TAM CO TAM",
+      sentence: "M CO TAM CO O TAM",
       color: "white",
     },
   ],
+  options: ["Opcja 1;", "Opcja 2;", "Opcja 3;"],
 };
 //functions
 
@@ -97,6 +97,13 @@ const renderResponse = async (response) => {
 
     await write(sentenceObject.sentence, newParagraph);
   }
+  response.options.forEach((option) => {
+    let newParagraph = document.createElement("p");
+    newParagraph.className = `text-option`;
+    gameTextField.appendChild(newParagraph);
+
+    write(`↪${option}`, newParagraph);
+  });
 };
 
 write("siemanko", gameTextField);
