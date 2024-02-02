@@ -26,6 +26,34 @@ const respond = {
   options: [],
 };
 
+const testRespond = {
+  text: [
+    {
+      sentence: "Hejka! To jest kolor ",
+      color: "white",
+    },
+    {
+      sentence: "czerwony ",
+      color: "red",
+    },
+    {
+      sentence: "a to ",
+      color: "white",
+    },
+    {
+      sentence: "niebieski! ",
+      color: "blue",
+    },
+    {
+      sentence: "Zielony. ",
+      color: "green",
+    },
+    {
+      sentence: "Żółty! ",
+      color: "yellow",
+    },
+  ],
+};
 //functions
 
 const isOdd = (number) => number % 2 !== 0;
@@ -35,27 +63,34 @@ const displayText = (inputString, target) => {
 };
 
 const write = (inputString, target) => {
-  const letters = inputString.split("");
+  return new Promise((resolve) => {
+    const letters = inputString.split("");
+    let respond = "";
 
-  console.log(letters);
-
-  let respond = "";
-
-  letters.forEach((letter, i) => {
-    setTimeout(() => {
-      respond += letter;
-      let respondToSend = respond;
-      console.log(i);
-      if (isOdd(i) & (i !== letters.length - 1)) {
-        respondToSend += "▮";
-      } else if (i !== letters.length - 1) {
-        respondToSend += "▯";
-      }
-      console.log(respond);
-      console.log(respondToSend);
-      displayText(respondToSend, target);
-    }, i * 100);
+    letters.forEach((letter, i) => {
+      setTimeout(() => {
+        respond += letter;
+        let respondToSend = respond;
+        if (isOdd(i) & (i !== letters.length - 1)) {
+          respondToSend += "▮";
+        } else if (i !== letters.length - 1) {
+          respondToSend += "▯";
+        }
+        displayText(respondToSend, target);
+        if (i === letters.length - 1) resolve();
+      }, i * 100);
+    });
   });
+};
+
+const renderResponse = async (response) => {
+  for (let sentenceObject of response.text) {
+    let newParagraph = document.createElement("span");
+    newParagraph.className = `text-${sentenceObject.color}`;
+    gameTextField.appendChild(newParagraph);
+
+    await write(sentenceObject.sentence, newParagraph);
+  }
 };
 
 write("siemanko", gameTextField);
