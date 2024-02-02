@@ -52,6 +52,11 @@ const testRespond = {
       sentence: "Żółty! ",
       color: "yellow",
     },
+    {
+      sentence:
+        "GIGANTYCZNIE DŁUGI TEKST KTÓRY MA SIĘ PRZECIĄĆ W NASTĘPNEJ LINII ZOBACZYMY JAK TO WYGLĄDA TEST TEST TEST TEST CO TAM CO TAM CO TAM ZOBACZYMY JAK TO WYGLĄDA TEST TEST TEST TEST CO TAM CO TAM CO TAM",
+      color: "white",
+    },
   ],
 };
 //functions
